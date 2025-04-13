@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import OtherPage from './OtherPage';
 import Fib from './Fib';
 
@@ -29,10 +29,10 @@ class App extends React.Component {
           <div className="nav">
             <Link to="/otherpage">Other Page</Link>
           </div>
-          <Switch>
+          <Routes>
             <Route exact path="/" component={Fib} />
             <Route path="/otherpage" component={OtherPage} />
-          </Switch>
+          </Routes>
         </div>
       </div>
     </Router>
