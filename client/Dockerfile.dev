@@ -1,0 +1,10 @@
+FROM node:lts-alpine
+ENV CI=true
+ENV WDS_SOCKET_PORT=0
+WORKDIR '/app'
+COPY ./package.json ./
+# Add a cache-busting argument to force npm install to run
+ARG CACHEBUST=1
+RUN npm install
+COPY . .
+CMD ["npm", "run", "start"]
