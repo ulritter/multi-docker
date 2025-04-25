@@ -34,6 +34,7 @@ const Fib = () => {
   };
 
   const renderSeenIndexes = () => {
+    console.log("renderSeenIndexes");
     return seenIndexes.map(({ number }) => number).join(", ");
   };
 
