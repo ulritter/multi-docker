@@ -1,12 +1,11 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import OtherPage from "./OtherPage";
-import Fib from "./Fib";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import OtherPage from './OtherPage';
+import Fib from './Fib';
 
 function App() {
-  console.log("App");
   return (
     <Router>
       <div className="App">
@@ -18,15 +17,15 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React Uwe
+            Learn React Uwe Neu
           </a>
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
         </header>
-        <Routes>
-          <Route path="/" element={<Fib />} />
-          <Route path="/otherpage" element={<OtherPage />} />
-        </Routes>
+        <div>
+          <Route exact path="/" component={Fib} />
+          <Route path="/otherpage" component={OtherPage} />
+        </div>
       </div>
     </Router>
   );
