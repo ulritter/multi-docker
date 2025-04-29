@@ -50,13 +50,13 @@ const Fib = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label>Enter your index:</label>
+      <form onSubmit={handleSubmit} style={{ marginTop: "10px" }}>
+        <label>Enter your index: </label>
         <input
           value={index}
           onChange={(event) => setIndex(event.target.value)}
         />
-        <button>Submit</button>
+        <button type="submit" style={{ marginLeft: "5px" }}>Submit</button>
       </form>
 
       <h3>Indexes I have seen:</h3>
