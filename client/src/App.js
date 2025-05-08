@@ -12,7 +12,7 @@ function App() {
         <header >
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-           Fibonacci Calculator
+           Fibonacci Calculator K8s
           </p>
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
