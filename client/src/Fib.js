@@ -23,7 +23,12 @@ const Fib = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+    const intIndex = parseInt(index);
+    console.log("index: " + intIndex);
+    if ((intIndex >= 40) || isNaN(intIndex)) {
+      alert("Please enter a valid index (0-40)");
+      return;
+    }
     await axios.post("/api/values", {
       index: index,
     });
