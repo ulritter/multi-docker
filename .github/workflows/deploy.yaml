@@ -18,7 +18,7 @@ jobs:
       - run: docker build -t cooltide/multi-server ./server
       - run: docker build -t cooltide/multi-worker ./worker
 
-      - run: docker push cooltide/multi-client
+      - run: docker push cooltide/multi-client:v2
       - run: docker push cooltide/multi-nginx
       - run: docker push cooltide/multi-server
       - run: docker push cooltide/multi-worker
