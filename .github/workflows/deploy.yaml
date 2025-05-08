@@ -13,7 +13,7 @@ jobs:
       - run: docker build -t cooltide/react-test -f ./client/Dockerfile.dev ./client
       - run: docker run -e CI=true cooltide/react-test npm test
 
-      - run: docker build -t cooltide/multi-client ./client
+      - run: docker build -t cooltide/multi-client:v2 ./client
       - run: docker build -t cooltide/multi-nginx ./nginx
       - run: docker build -t cooltide/multi-server ./server
       - run: docker build -t cooltide/multi-worker ./worker
