@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import OtherPage from "./OtherPage";
 import Fib from "./Fib";
@@ -10,7 +10,18 @@ function App() {
     <Router>
       <div className="App">
         <header >
-          <img src={logo} className="App-logo" alt="logo" />
+        <div>
+            <div className="cube-container">
+              <div className="cube">
+                <div className="face front">Uwe ...</div>
+                <div className="face back">Uwe ...</div>
+                <div className="face left">Uwe ...</div>
+                <div className="face right">Uwe ...</div>
+                <div className="face top"></div>
+                <div className="face bottom"></div>
+              </div>
+            </div>
+          </div>
           <p>
            Fibonacci Calculator K8s (GCP)
           </p>

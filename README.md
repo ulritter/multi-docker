@@ -88,3 +88,20 @@ Copy and paste the token into the login form of the dashboard. Be careful not to
 The above steps can be found in the official documentation:
 
 https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md
+
+### K8s shell (GCP):
+gcloud config set project multi-k8s-459414
+gcloud config set compute/zone europe-west1-b
+gcloud container clusters get-credentials multi-cluster 
+
+kubectl create secret generic pgpassword --from-literal=PGPASSWORD="postgrespassword"
+
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+
+helm upgrade --install ingress-nginx ingress-nginx \
+  --repo https://kubernetes.github.io/ingress-nginx \
+  --namespace ingress-nginx --create-namespace
+
+kubectl get service ingress-nginx-controller --namespace=ingress-nginx
