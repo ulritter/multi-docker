@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wema-test-de-tls
+spec:
+  secretName: wema-test-de
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: wema-test.de
+  dnsNames:
+    - wema-test.de
+    - www.wema-test.de
+    
