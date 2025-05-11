@@ -105,3 +105,14 @@ helm upgrade --install ingress-nginx ingress-nginx \
   --namespace ingress-nginx --create-namespace
 
 kubectl get service ingress-nginx-controller --namespace=ingress-nginx
+
+https://cert-manager.io/docs/installation/helm/#steps
+
+helm repo add jetstack https://charts.jetstack.io
+
+helm install \
+  cert-manager jetstack/cert-manager \
+  --namespace cert-manager \
+  --create-namespace \
+  --version v1.8.0 \
+  --set installCRDs=true
